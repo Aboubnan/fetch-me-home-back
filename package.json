@@ -15,19 +15,19 @@
 		"lint": "pnpx @biomejs/biome lint ./",
 		"lint:fix": "pnpx @biomejs/biome lint --write ./",
 		"check": "pnpx @biomejs/biome check ./",
-		"check:fix": "pnpx @biomejs/biome check --write ./"
+		"check:fix": "pnpx @biomejs/biome check --write ./",
+		"start": "node --env-file=.env app.js"
 	},
 	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/O-clock-Samoussas/pet-foster-connect-back.git"
+  "type": "git",
+  "url": "git+https://github.com/Aboubnan/fetch-me-home-back.git"
+},
+	"engines": {
+		"node": ">=18.0.0"
 	},
 	"keywords": ["pet", "foster", "backend", "api"],
 	"author": "ABDER DEN DUANEE GWEN",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/O-clock-Samoussas/pet-foster-connect-back/issues"
-	},
-	"homepage": "https://github.com/O-clock-Samoussas/pet-foster-connect-back#readme",
 	"dependencies": {
 		"bcryptjs": "^3.0.2",
 		"biome": "^0.3.3",
