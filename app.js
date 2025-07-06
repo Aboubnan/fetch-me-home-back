@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 
 
 // Sert les images depuis le dossier /data/images
-app.use('/images', express.static(path.resolve(__dirname, 'data/images')));
+app.use('/images', express.static(path.resolve(__dirname, 'src/data/images')));
 
 
 
