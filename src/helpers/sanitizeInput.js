@@ -10,4 +10,4 @@ function sanitizeInput(obj) {
     }
 }
 
-export default sanitizeInput;a
+export default sanitizeInput;
