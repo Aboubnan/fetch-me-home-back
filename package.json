@@ -16,7 +16,7 @@
 		"lint:fix": "pnpx @biomejs/biome lint --write ./",
 		"check": "pnpx @biomejs/biome check ./",
 		"check:fix": "pnpx @biomejs/biome check --write ./",
-		"start": "node --env-file=.env app.js"
+		"start": "node app.js"
 	},
 	"repository": {
   "type": "git",
