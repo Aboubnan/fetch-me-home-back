@@ -3,7 +3,6 @@ import { Association, User, Pet, Request, Species, Picture } from "../models/rel
 
 // création d'associations
 await Association.bulkCreate([
-
     { 
         email: "spa44@spa.fr", 
         name: "SPA 21 NANTES", 
@@ -15,7 +14,6 @@ await Association.bulkCreate([
         logo: "https://www.la-spa.fr/app/app/uploads/2021/09/MicrosoftTeams-image-63.png",
         description: "LA SPA de Nantes-Bouguenais vous accueille les lundis, mercredis, vendredis (13h30-17h00) et samedis et dimanches (10h30-12h30/14h00-17h30) pour trouver votre nouveau compagnon de vie. Le refuge se situe au Sud-ouest de Nantes sur la commune de Bouguenais."
     },
-
     { 
         email: "cda12@cda12.fr", 
         name: "Club de Défense des Animaux Paris 12", 
@@ -27,7 +25,6 @@ await Association.bulkCreate([
         logo: "https://www.cda-paris12.com/wp-content/uploads/2023/08/cropped-LOGO-CERCLE-TXT-NOIR.png",
         description: "Le CDA 12 (Club de Défense des Animaux Paris 12) est une association d’assistance aux chats abandonnés, située dans le 12ème arrondissement à Paris. Créée en 1979 et reconnue d’intérêt général, l’association s’appuie sur son réseau de familles d’accueil référencées et bénévoles dans tout Paris et la proche banlieue."
     },
-    
   {
     email: "spa69@spa.fr",
     name: "SPA Lyon Sud Est",
@@ -269,257 +266,78 @@ await User.bulkCreate([
 
 // création d'animaux à adopter
 await Pet.bulkCreate([
-  // 🐶 Chiens (species_id: 1)
-  {
-    name: "Rex",
-    birthdate: "2020-03-15",
-    sex: "Male",
-    description: "Chien fidèle et protecteur, idéal pour une maison avec jardin.",
-    species_id: 1,
-    association_id: 1
-  },
-  {
-    name: "Bella",
-    birthdate: "2021-07-22",
-    sex: "Femelle",
-    description: "Chienne douce et affectueuse, adore les enfants.",
-    species_id: 1,
-    association_id: 2
-  },
-  {
-    name: "Max",
-    birthdate: "2019-11-05",
-    sex: "Male",
-    description: "Chien énergique, parfait pour les longues balades.",
-    species_id: 1,
-    association_id: 3
-  },
-  {
-    name: "Nala",
-    birthdate: "2022-02-10",
-    sex: "Femelle",
-    description: "Très joueuse, elle a besoin d’un maître patient et actif.",
-    species_id: 1,
-    association_id: 4
-  },
-  {
-    name: "Rocky",
-    birthdate: "2018-06-30",
-    sex: "Male",
-    description: "Chien calme, habitué à la vie en appartement.",
-    species_id: 1,
-    association_id: 5
-  },
-  {
-    name: "Luna",
-    birthdate: "2023-01-12",
-    sex: "Femelle",
-    description: "Jeune chienne curieuse, en pleine phase d’apprentissage.",
-    species_id: 1,
-    association_id: 6
-  },
+  // 🐶 Chiens (1–12)
+  { name: "Rex", birthdate: "2020-01-01", sex: "male", description: "Chien joueur", species_id: 1, association_id: 1 },
+  { name: "Bella", birthdate: "2019-05-12", sex: "female", description: "Très affectueuse", species_id: 1, association_id: 1 },
+  { name: "Max", birthdate: "2021-03-20", sex: "male", description: "Adore courir", species_id: 1, association_id: 2 },
+  { name: "Luna", birthdate: "2022-07-15", sex: "female", description: "Chienne calme", species_id: 1, association_id: 2 },
+  { name: "Rocky", birthdate: "2018-11-30", sex: "male", description: "Protecteur", species_id: 1, association_id: 3 },
+  { name: "Maya", birthdate: "2020-09-10", sex: "female", description: "Très douce", species_id: 1, association_id: 3 },
+  { name: "Toby", birthdate: "2021-06-01", sex: "male", description: "Toujours curieux", species_id: 1, association_id: 4 },
+  { name: "Nala", birthdate: "2019-02-14", sex: "female", description: "Très sociable", species_id: 1, association_id: 4 },
+  { name: "Oscar", birthdate: "2020-12-25", sex: "male", description: "Petit gabarit", species_id: 1, association_id: 5 },
+  { name: "Chanel", birthdate: "2021-08-08", sex: "female", description: "Très élégante", species_id: 1, association_id: 5 },
+  { name: "Simba", birthdate: "2022-01-10", sex: "male", description: "Toujours joyeux", species_id: 1, association_id: 6 },
+  { name: "Daisy", birthdate: "2020-04-04", sex: "female", description: "Adore les enfants", species_id: 1, association_id: 6 },
 
-  // 🐱 Chats (species_id: 2)
-  {
-    name: "Misty",
-    birthdate: "2021-04-18",
-    sex: "Femelle",
-    description: "Chatte indépendante, aime les coins tranquilles.",
-    species_id: 2,
-    association_id: 1
-  },
-  {
-    name: "Simba",
-    birthdate: "2020-09-09",
-    sex: "Male",
-    description: "Très sociable, il s’entend bien avec les enfants et les autres chats.",
-    species_id: 2,
-    association_id: 2
-  },
-  {
-    name: "Chaussette",
-    birthdate: "2019-12-25",
-    sex: "Femelle",
-    description: "Petite chatte timide mais très câline une fois en confiance.",
-    species_id: 2,
-    association_id: 3
-  },
-  {
-    name: "Grisou",
-    birthdate: "2022-06-01",
-    sex: "Male",
-    description: "Chat joueur, adore grimper et explorer.",
-    species_id: 2,
-    association_id: 4
-  },
-  {
-    name: "Perle",
-    birthdate: "2023-03-03",
-    sex: "Femelle",
-    description: "Très douce, parfaite pour une personne âgée.",
-    species_id: 2,
-    association_id: 5
-  },
-  {
-    name: "Tigrou",
-    birthdate: "2021-08-14",
-    sex: "Male",
-    description: "Chat actif, a besoin d’espace pour se dépenser.",
-    species_id: 2,
-    association_id: 6
-  },
+  // 🐱 Chats (13–24)
+  { name: "Milo", birthdate: "2021-02-02", sex: "male", description: "Chat câlin", species_id: 2, association_id: 1 },
+  { name: "Lily", birthdate: "2020-06-06", sex: "female", description: "Très calme", species_id: 2, association_id: 1 },
+  { name: "Charlie", birthdate: "2019-09-09", sex: "male", description: "Indépendant", species_id: 2, association_id: 2 },
+  { name: "Cleo", birthdate: "2022-03-03", sex: "female", description: "Très joueuse", species_id: 2, association_id: 2 },
+  { name: "Felix", birthdate: "2020-10-10", sex: "male", description: "Gros dormeur", species_id: 2, association_id: 3 },
+  { name: "Mimi", birthdate: "2021-11-11", sex: "female", description: "Très douce", species_id: 2, association_id: 3 },
+  { name: "Shadow", birthdate: "2018-08-08", sex: "male", description: "Discret", species_id: 2, association_id: 4 },
+  { name: "Zelda", birthdate: "2019-12-12", sex: "female", description: "Très vive", species_id: 2, association_id: 4 },
+  { name: "Tom", birthdate: "2021-01-01", sex: "male", description: "Curieux", species_id: 2, association_id: 5 },
+  { name: "Nina", birthdate: "2020-05-05", sex: "female", description: "Très affectueuse", species_id: 2, association_id: 5 },
+  { name: "Gus", birthdate: "2022-02-02", sex: "male", description: "Petit explorateur", species_id: 2, association_id: 6 },
+  { name: "Luna", birthdate: "2021-07-07", sex: "female", description: "Très calme", species_id: 2, association_id: 6 },
 
-  // 🐰 Lapins (species_id: 3)
-  {
-    name: "Neige",
-    birthdate: "2022-12-01",
-    sex: "Femelle",
-    description: "Lapine blanche très douce, aime les caresses.",
-    species_id: 3,
-    association_id: 1
-  },
-  {
-    name: "Coco",
-    birthdate: "2023-02-15",
-    sex: "Male",
-    description: "Lapin curieux, adore explorer son environnement.",
-    species_id: 3,
-    association_id: 2
-  },
-  {
-    name: "Lili",
-    birthdate: "2021-05-20",
-    sex: "Femelle",
-    description: "Très calme, idéale pour une famille avec enfants.",
-    species_id: 3,
-    association_id: 3
-  },
-  {
-    name: "Biscotte",
-    birthdate: "2020-10-10",
-    sex: "Male",
-    description: "Lapin gourmand, adore les légumes frais.",
-    species_id: 3,
-    association_id: 4
-  },
-  {
-    name: "Ficelle",
-    birthdate: "2023-01-01",
-    sex: "Femelle",
-    description: "Très sociable, aime la compagnie d’autres lapins.",
-    species_id: 3,
-    association_id: 5
-  },
-  {
-    name: "Pistache",
-    birthdate: "2022-07-07",
-    sex: "Male",
-    description: "Lapin vif, a besoin d’espace pour courir.",
-    species_id: 3,
-    association_id: 6
-  },
+  // 🐰 Lapins (25–36)
+  { name: "Coco", birthdate: "2021-04-01", sex: "male", description: "Lapin curieux", species_id: 3, association_id: 1 },
+  { name: "Snow", birthdate: "2020-12-12", sex: "female", description: "Très douce", species_id: 3, association_id: 1 },
+  { name: "Bunny", birthdate: "2022-06-06", sex: "male", description: "Adore sauter", species_id: 3, association_id: 2 },
+  { name: "Fluffy", birthdate: "2021-09-09", sex: "female", description: "Très câline", species_id: 3, association_id: 2 },
+  { name: "Thumper", birthdate: "2020-03-03", sex: "male", description: "Toujours actif", species_id: 3, association_id: 3 },
+  { name: "Lola", birthdate: "2021-10-10", sex: "female", description: "Très calme", species_id: 3, association_id: 3 },
+  { name: "Choco", birthdate: "2019-11-11", sex: "male", description: "Petit gourmand", species_id: 3, association_id: 4 },
+  { name: "Mochi", birthdate: "2020-08-08", sex: "female", description: "Très douce", species_id: 3, association_id: 4 },
+  { name: "Jazz", birthdate: "2021-05-05", sex: "male", description: "Lapin joueur", species_id: 3, association_id: 5 },
+  { name: "Cookie", birthdate: "2022-01-01", sex: "female", description: "Très sociable", species_id: 3, association_id: 5 },
+  { name: "Biscuit", birthdate: "2020-07-07", sex: "male", description: "Très calme", species_id: 3, association_id: 6 },
+  { name: "Poppy", birthdate: "2021-03-03", sex: "female", description: "Adore les câlins", species_id: 3, association_id: 6 },
 
-  // 🐾 Furets (species_id: 4)
-  {
-    name: "Ziggy",
-    birthdate: "2021-03-03",
-    sex: "Male",
-    description: "Furet joueur, adore se cacher dans les couvertures.",
-    species_id: 4,
-    association_id: 1
-  },
-  {
-    name: "Luna",
-    birthdate: "2022-06-06",
-    sex: "Femelle",
-    description: "Très affectueuse, aime être portée.",
-    species_id: 4,
-    association_id: 2
-  },
-  {
-    name: "Rocket",
-    birthdate: "2020-11-11",
-    sex: "Male",
-    description: "Furet très actif, a besoin de stimulation.",
-    species_id: 4,
-    association_id: 3
-  },
-  {
-    name: "Moka",
-    birthdate: "2023-04-04",
-    sex: "Femelle",
-    description: "Curieuse et vive, adore explorer.",
-    species_id: 4,
-    association_id: 4
-  },
-  {
-    name: "Twix",
-    birthdate: "2021-09-09",
-    sex: "Male",
-    description: "Furet calme, habitué à la vie en intérieur.",
-    species_id: 4,
-    association_id: 5
-  },
-  {
-    name: "Nina",
-    birthdate: "2022-08-08",
-    sex: "Femelle",
-    description: "Très sociable, s’entend bien avec les chats.",
-    species_id: 4,
-    association_id: 6
-  },
+  // 🐾 Furets (37–50)
+  { name: "Ziggy", birthdate: "2021-02-02", sex: "male", description: "Furet curieux", species_id: 4, association_id: 1 },
+  { name: "Luna", birthdate: "2020-06-06", sex: "female", description: "Très vive", species_id: 4, association_id: 1 },
+  { name: "Rocket", birthdate: "2022-04-04", sex: "male", description: "Toujours en mouvement", species_id: 4, association_id: 2 },
+  { name: "Pixie", birthdate: "2021-09-09", sex: "female", description: "Très douce", species_id: 4, association_id: 2 },
+  { name: "Bandit", birthdate: "2020-10-10", sex: "male", description: "Furet malin", species_id: 4, association_id: 3 },
+  { name: "Nina", birthdate: "2021-11-11", sex: "female", description: "Très joueuse", species_id: 4, association_id: 3 },
+  { name: "Flash", birthdate: "2019-08-08", sex: "male", description: "Rapide et curieux", species_id: 4, association_id: 4 },
+  { name: "Daisy", birthdate: "2020-12-12", sex: "female", description: "Très affectueuse", species_id: 4, association_id: 4 },
+  { name: "Storm", birthdate: "2021-01-01", sex: "male", description: "Furet joueur", species_id: 4, association_id: 5 },
+  { name: "Lily", birthdate: "2020-05-05", sex: "female", description: "Très calme", species_id: 4, association_id: 5 },
+  { name: "Neo", birthdate: "2022-02-02", sex: "male", description: "Toujours curieux", species_id: 4, association_id: 6 },
+  { name: "Zara", birthdate: "2021-07-07", sex: "female", description: "Très douce", species_id: 4, association_id: 6 },
+  { name: "Echo", birthdate: "2020-09-09", sex: "male", description: "Furet discret", species_id: 4, association_id: 1 },
+  { name: "Nova", birthdate: "2021-12-12", sex: "female", description: "Très vive", species_id: 4, association_id: 2 },
 
-  // 🐹 Hamsters (species_id: 5)
-  {
-    name: "Nugget",
-    birthdate: "2023-01-01",
-    sex: "Male",
-    description: "Hamster doré très actif la nuit.",
-    species_id: 5,
-    association_id: 1
-  },
-  {
-    name: "Poppy",
-    birthdate: "2022-02-02",
-    sex: "Femelle",
-    description: "Très douce, aime se cacher dans la litière.",
-    species_id: 5,
-    association_id: 2
-  },
-  {
-    name: "Speedy",
-    birthdate: "2021-03-03",
-    sex: "Male",
-    description: "Hamster curieux, adore explorer son habitat.",
-    species_id: 5,
-    association_id: 3
-  },
-  {
-    name: "Luna",
-    birthdate: "2023-04-04",
-    sex: "Femelle",
-    description: "Très calme, idéale pour les enfants.",
-    species_id: 5,
-    association_id: 4
-  },
-  {
-    name: "Biscuit",
-    birthdate: "2022-05-05",
-    sex: "Male",
-    description: "Hamster gourmand, adore les graines de tournesol.",
-    species_id: 5,
-    association_id: 5
-  },
-  {
-    name: "Mimi",
-    birthdate: "2021-06-06",
-    sex: "Femelle",
-    description: "Très vive, aime courir dans sa roue.",
-    species_id: 5,
-    association_id: 6
-  }
-   
+  // 🐹 Hamsters (51–60) — ou une autre espèce si tu préfères
+  { name: "Pico", birthdate: "2022-03-03", sex: "male", description: "Petit et rapide", species_id: 5, association_id: 3 },
+  { name: "Luna", birthdate: "2021-06-06", sex: "female", description: "Très douce", species_id: 5, association_id: 3 },
+  { name: "Taco", birthdate: "2020-11-11", sex: "male", description: "Adore grignoter", species_id: 5, association_id: 4 },
+  { name: "Mimi", birthdate: "2021-08-08", sex: "female", description: "Très calme", species_id: 5, association_id: 4 },
+  { name: "Bibi", birthdate: "2022-01-01", sex: "male", description: "Très curieux", species_id: 5, association_id: 5 },
+  { name: "Lili", birthdate: "2020-04-04", sex: "female", description: "Adore les câlins", species_id: 5, association_id: 6 },
+  { name: "Nugget", birthdate: "2022-05-05", sex: "male", description: "Petit mais costaud", species_id: 5, association_id: 1 },
+  { name: "Hazel", birthdate: "2021-10-10", sex: "female", description: "Très douce et calme", species_id: 5, association_id: 2 },
+  { name: "Popcorn", birthdate: "2020-12-12", sex: "male", description: "Toujours en mouvement", species_id: 5, association_id: 5 },
+  { name: "Peach", birthdate: "2021-03-03", sex: "female", description: "Adore se cacher", species_id: 5, association_id: 6 }
 ]);
+
+
 
 // création d'une requête d'adoption
 await Request.bulkCreate([
@@ -658,7 +476,7 @@ await Picture.bulkCreate([
 
   { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 30 },
   { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 30 },
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 30 }
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 30 },
 
      // 🐶 Chiens (pet_id: 31 à 36)
   { url: "https://pixabay.com/photos/animals-dog-cat-puppy-young-2198994/", pet_id: 31 },

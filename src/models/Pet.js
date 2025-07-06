@@ -16,7 +16,7 @@ Pet.init(
         },
 
         sex: {
-            type: DataTypes.ENUM("Male", "Femelle"),
+            type: DataTypes.ENUM("male", "female"),
             allowNull: false,
         },
 
