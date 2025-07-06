@@ -1,19 +1,31 @@
 import cors from 'cors'; // CORS (Cross-Origin Resource Sharing) est un mécanisme de sécurité qui permet de contrôler les ressources partagées entre différentes origines
 import express from 'express'; // Express est un framework minimaliste pour créer des applications web en Node.js
-import {router} from './src/routers/router.js'; // Importation du routeur contenant toutes les routes de l'application
+import { router } from './src/routers/router.js'; // Importation du routeur contenant toutes les routes de l'application
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 
 
 // Création de l'application Express
 const app = express();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+
+// Sert les images depuis le dossier /data/images
+app.use('/images', express.static(path.resolve(__dirname, 'data/images')));
+
+
+
 //  Active CORS pour toutes les routes
 
 app.use(
 	cors({
-		origin: ["http://localhost:5173","https://fetch-me-home.netlify.app"
-],
-		
+		origin: ["http://localhost:5173", "https://fetch-me-home.netlify.app"
+		],
+
 		methods: ["GET", "POST", "PUT", "DELETE"],
 		credentials: true,
 	}),
