@@ -3,28 +3,30 @@ import { Association, User, Pet, Request, Species, Picture } from "../models/rel
 
 // création d'associations
 await Association.bulkCreate([
-    { 
-        email: "spa44@spa.fr", 
-        name: "SPA 21 NANTES", 
-        password: "azertyuiop", 
-        address: "route des Landes Bigot", 
-        zip_code: "44340", 
-        city: "Bouguenais", 
-        phone_number: "0249628102",
-        logo: "https://www.la-spa.fr/app/app/uploads/2021/09/MicrosoftTeams-image-63.png",
-        description: "LA SPA de Nantes-Bouguenais vous accueille les lundis, mercredis, vendredis (13h30-17h00) et samedis et dimanches (10h30-12h30/14h00-17h30) pour trouver votre nouveau compagnon de vie. Le refuge se situe au Sud-ouest de Nantes sur la commune de Bouguenais."
-    },
-    { 
-        email: "cda12@cda12.fr", 
-        name: "Club de Défense des Animaux Paris 12", 
-        password: "ItIsASecretToEverybody", 
-        address: "181 avenue Daumesnil", 
-        zip_code: "75012", 
-        city: "Paris", 
-        phone_number: "0174314705",
-        logo: "https://www.cda-paris12.com/wp-content/uploads/2023/08/cropped-LOGO-CERCLE-TXT-NOIR.png",
-        description: "Le CDA 12 (Club de Défense des Animaux Paris 12) est une association d’assistance aux chats abandonnés, située dans le 12ème arrondissement à Paris. Créée en 1979 et reconnue d’intérêt général, l’association s’appuie sur son réseau de familles d’accueil référencées et bénévoles dans tout Paris et la proche banlieue."
-    },
+  {
+    email: "spa44@spa.fr",
+    name: "SPA 21 NANTES",
+    password: "azertyuiop",
+    address: "route des Landes Bigot",
+    zip_code: "44340",
+    city: "Bouguenais",
+    phone_number: "0249628102",
+    logo: "https://www.la-spa.fr/app/app/uploads/2021/09/MicrosoftTeams-image-63.png",
+    description:
+      "LA SPA de Nantes-Bouguenais vous accueille les lundis, mercredis, vendredis (13h30-17h00) et samedis et dimanches (10h30-12h30/14h00-17h30) pour trouver votre nouveau compagnon de vie. Le refuge se situe au Sud-ouest de Nantes sur la commune de Bouguenais.",
+  },
+  {
+    email: "cda12@cda12.fr",
+    name: "Club de Défense des Animaux Paris 12",
+    password: "ItIsASecretToEverybody",
+    address: "181 avenue Daumesnil",
+    zip_code: "75012",
+    city: "Paris",
+    phone_number: "0174314705",
+    logo: "https://www.cda-paris12.com/wp-content/uploads/2023/08/cropped-LOGO-CERCLE-TXT-NOIR.png",
+    description:
+      "Le CDA 12 (Club de Défense des Animaux Paris 12) est une association d’assistance aux chats abandonnés, située dans le 12ème arrondissement à Paris. Créée en 1979 et reconnue d’intérêt général, l’association s’appuie sur son réseau de familles d’accueil référencées et bénévoles dans tout Paris et la proche banlieue.",
+  },
   {
     email: "spa69@spa.fr",
     name: "SPA Lyon Sud Est",
@@ -34,7 +36,8 @@ await Association.bulkCreate([
     city: "Lyon",
     phone_number: "0478387171",
     logo: "https://www.spa-lyon.org/wp-content/uploads/2020/01/spalyon-2019-rvb-300x256.png",
-    description: "La S.P.A. de Lyon est une association indépendante, créée en 1853 et reconnue d'utilité publique en 1893. Elle porte secours aux animaux en détresse : perdus, abandonnés et maltraités. Elle gère les refuges de Brignais (Rhône) et de Dompierre-sur-Veyle (Ain)."
+    description:
+      "La S.P.A. de Lyon est une association indépendante, créée en 1853 et reconnue d'utilité publique en 1893. Elle porte secours aux animaux en détresse : perdus, abandonnés et maltraités. Elle gère les refuges de Brignais (Rhône) et de Dompierre-sur-Veyle (Ain).",
   },
   {
     email: "contact@refugebordeaux.fr",
@@ -44,8 +47,9 @@ await Association.bulkCreate([
     zip_code: "33000",
     city: "Bordeaux",
     phone_number: "0556123456",
-    logo: "https://via.placeholder.com/150?text=Refuge+Bordeaux",
-    description: "Le Refuge Animalier de Bordeaux accueille chaque année plus de 500 animaux abandonnés. Notre mission : leur offrir une seconde chance dans un foyer aimant."
+    logo: "https://img0-placeit-net.s3-accelerate.amazonaws.com/uploads/stage/stage_image/146858/optimized_large_thumb_stage.jpg",
+    description:
+      "Le Refuge Animalier de Bordeaux accueille chaque année plus de 500 animaux abandonnés. Notre mission : leur offrir une seconde chance dans un foyer aimant.",
   },
   {
     email: "accueil@amisdesbetes.org",
@@ -55,8 +59,9 @@ await Association.bulkCreate([
     zip_code: "75012",
     city: "Paris",
     phone_number: "0145789632",
-    logo: "https://via.placeholder.com/150?text=Amis+des+Bêtes",
-    description: "Association parisienne dédiée à la protection des animaux domestiques et à la sensibilisation du public à la cause animale."
+    logo: "https://cdn4.vectorstock.com/i/1000x1000/62/33/icon-logo-for-an-animal-shelter-dog-and-a-cat-vector-3496233.jpg",
+    description:
+      "Association parisienne dédiée à la protection des animaux domestiques et à la sensibilisation du public à la cause animale.",
   },
   {
     email: "info@coeurcanin.fr",
@@ -66,8 +71,9 @@ await Association.bulkCreate([
     zip_code: "84000",
     city: "Avignon",
     phone_number: "0490321456",
-    logo: "https://via.placeholder.com/150?text=Cœur+Canin",
-    description: "Cœur Canin est un refuge spécialisé dans l’accueil et la rééducation de chiens abandonnés ou maltraités dans le Vaucluse."
+    logo: "https://img.freepik.com/premium-vector/dog-shelters-logo_1011614-12.jpg?w=2000",
+    description:
+      "Cœur Canin est un refuge spécialisé dans l’accueil et la rééducation de chiens abandonnés ou maltraités dans le Vaucluse.",
   },
   {
     email: "contact@felinslibres.fr",
@@ -77,8 +83,9 @@ await Association.bulkCreate([
     zip_code: "44000",
     city: "Nantes",
     phone_number: "0240123456",
-    logo: "https://via.placeholder.com/150?text=Félins+Libres",
-    description: "Félins Libres œuvre pour la stérilisation, la protection et l’adoption des chats errants dans la région nantaise."
+    logo: "https://img.freepik.com/premium-vector/animal-shelter-logo-homesweethome-animal-shelter_666353-1906.jpg?w=2000",
+    description:
+      "Félins Libres œuvre pour la stérilisation, la protection et l’adoption des chats errants dans la région nantaise.",
   },
   {
     email: "refuge@animauxsud.fr",
@@ -88,8 +95,9 @@ await Association.bulkCreate([
     zip_code: "13008",
     city: "Marseille",
     phone_number: "0491123456",
-    logo: "https://via.placeholder.com/150?text=Refuge+Sud",
-    description: "Situé à Marseille, le Refuge du Sud accueille chiens, chats et NAC dans un cadre chaleureux et sécurisé."
+    logo: "https://www.zarla.com/images/zarla-adopt-a-paw-1x1-2400x2400-20240108-89d4qtqwvf64vq73gf3r.png?crop=1:1,smart&width=250&dpr=2",
+    description:
+      "Situé à Marseille, le Refuge du Sud accueille chiens, chats et NAC dans un cadre chaleureux et sécurisé.",
   },
   {
     email: "accueil@petitspas.fr",
@@ -99,8 +107,9 @@ await Association.bulkCreate([
     zip_code: "67000",
     city: "Strasbourg",
     phone_number: "0388123456",
-    logo: "https://via.placeholder.com/150?text=Petits+Pas",
-    description: "Petits Pas est une association strasbourgeoise qui place les animaux en famille d’accueil en attendant leur adoption définitive."
+    logo: "https://img.freepik.com/premium-vector/animal-shelter-logo-homesweethome-animal-shelter_666353-1906.jpg?w=2000",
+    description:
+      "Petits Pas est une association strasbourgeoise qui place les animaux en famille d’accueil en attendant leur adoption définitive.",
   },
   {
     email: "contact@refugeamiens.fr",
@@ -110,8 +119,9 @@ await Association.bulkCreate([
     zip_code: "80000",
     city: "Amiens",
     phone_number: "0322123456",
-    logo: "https://via.placeholder.com/150?text=Refuge+Amiens",
-    description: "Le Refuge d’Amiens recueille les animaux abandonnés ou trouvés et leur offre une seconde chance grâce à l’adoption."
+    logo: "https://img0-placeit-net.s3-accelerate.amazonaws.com/uploads/stage/stage_image/146858/optimized_large_thumb_stage.jpg",
+    description:
+      "Le Refuge d’Amiens recueille les animaux abandonnés ou trouvés et leur offre une seconde chance grâce à l’adoption.",
   },
   {
     email: "info@animauxlibres.fr",
@@ -121,8 +131,9 @@ await Association.bulkCreate([
     zip_code: "59000",
     city: "Lille",
     phone_number: "0320123456",
-    logo: "https://via.placeholder.com/150?text=Animaux+Libres",
-    description: "Animaux Libres est une association lilloise qui lutte contre la maltraitance animale et favorise l’adoption responsable."
+    logo: "https://cdn4.vectorstock.com/i/1000x1000/62/33/icon-logo-for-an-animal-shelter-dog-and-a-cat-vector-3496233.jpg",
+    description:
+      "Animaux Libres est une association lilloise qui lutte contre la maltraitance animale et favorise l’adoption responsable.",
   },
   {
     email: "accueil@refugegrenoble.fr",
@@ -132,37 +143,38 @@ await Association.bulkCreate([
     zip_code: "38000",
     city: "Grenoble",
     phone_number: "0476123456",
-    logo: "https://via.placeholder.com/150?text=Refuge+Grenoble",
-    description: "Le Refuge de Grenoble accueille chiens et chats abandonnés et leur offre soins, sécurité et amour en attendant une nouvelle famille."
-  }
+    logo: "https://img.freepik.com/premium-vector/dog-shelters-logo_1011614-12.jpg?w=2000",
+    description:
+      "Le Refuge de Grenoble accueille chiens et chats abandonnés et leur offre soins, sécurité et amour en attendant une nouvelle famille.",
+  },
 ]);
 
 // création des espèces
 await Species.bulkCreate([
-    {
-        name: "Chien"
-    },
+  {
+    name: "Chien"
+  },
 
-    {
-        name: "Chat"
-    },
+  {
+    name: "Chat"
+  },
 
-    {
-        name: "Lapin"
-    },
+  {
+    name: "Lapin"
+  },
 
-    {
-        name: "Furet"
-    },
+  {
+    name: "Furet"
+  },
 
-    {
-        name: "Hamster"
-    }
+  {
+    name: "Hamster"
+  }
 ]);
 
 // création d'utilisateurs (1 admin et 2 bénévoles)
 await User.bulkCreate([
-    {
+  {
     email: "lea.dupont@example.com",
     password: "benevole123",
     first_name: "Léa",
@@ -337,148 +349,146 @@ await Pet.bulkCreate([
   { name: "Peach", birthdate: "2021-03-03", sex: "female", description: "Adore se cacher", species_id: 5, association_id: 6 }
 ]);
 
-
-
 // création d'une requête d'adoption
 await Request.bulkCreate([
-    {
-        starting_date: "2025-04-30",
-        ending_date: "2025-05-15",
-        request_text: "Bonjour, Blablablabla...",   
-        user_id: 2,
-        pet_id: 3,
-        association_id: 1
-    }
+  {
+    starting_date: "2025-04-30",
+    ending_date: "2025-05-15",
+    request_text: "Bonjour, Blablablabla...",
+    user_id: 2,
+    pet_id: 3,
+    association_id: 1
+  }
 ])
 
 // création d'images pour animaux
 await Picture.bulkCreate([
   // 🐶 Chiens (pet_id: 1 à 6)
-  { url: "https://pixabay.com/photos/animals-dog-cat-puppy-young-2198994/", pet_id: 1 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-labrador-retriever-1108099/", pet_id: 1 },
-  { url: "https://pixabay.com/photos/dog-puppy-pet-cute-animal-3071334/", pet_id: 1 },
+  { url: "https://images.pexels.com/photos/458799/pexels-photo-458799.jpeg", pet_id: 1 },
+  { url: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg", pet_id: 1 },
+  { url: "https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_1280.jpg", pet_id: 1 },
 
-  { url: "https://pixabay.com/photos/animals-dog-cat-puppy-young-2198994/", pet_id: 2 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-labrador-retriever-1108099/", pet_id: 2 },
-  { url: "https://pixabay.com/photos/dog-puppy-pet-cute-animal-3071334/", pet_id: 2 },
+  { url: "https://cdn.pixabay.com/photo/2017/11/09/21/41/dog-2935520_1280.jpg", pet_id: 2 },
+  { url: "https://images.pexels.com/photos/573186/pexels-photo-573186.jpeg", pet_id: 2 },
+  { url: "https://cdn.pixabay.com/photo/2016/02/19/11/19/dog-1209744_1280.jpg", pet_id: 2 },
 
-  { url: "https://pixabay.com/photos/animals-dog-cat-puppy-young-2198994/", pet_id: 3 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-labrador-retriever-1108099/", pet_id: 3 },
-  { url: "https://pixabay.com/photos/dog-puppy-pet-cute-animal-3071334/", pet_id: 3 },
+  { url: "https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg", pet_id: 3 },
+  { url: "https://cdn.pixabay.com/photo/2016/11/21/16/03/dog-1844465_1280.jpg", pet_id: 3 },
+  { url: "https://images.pexels.com/photos/1440386/pexels-photo-1440386.jpeg", pet_id: 3 },
 
-  { url: "https://pixabay.com/photos/animals-dog-cat-puppy-young-2198994/", pet_id: 4 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-labrador-retriever-1108099/", pet_id: 4 },
-  { url: "https://pixabay.com/photos/dog-puppy-pet-cute-animal-3071334/", pet_id: 4 },
+  { url: "https://cdn.pixabay.com/photo/2018/02/01/19/32/dog-3125778_1280.jpg", pet_id: 4 },
+  { url: "https://images.pexels.com/photos/442154/pexels-photo-442154.jpeg", pet_id: 4 },
+  { url: "https://cdn.pixabay.com/photo/2020/04/20/08/07/dog-5066260_1280.jpg", pet_id: 4 },
 
-  { url: "https://pixabay.com/photos/animals-dog-cat-puppy-young-2198994/", pet_id: 5 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-labrador-retriever-1108099/", pet_id: 5 },
-  { url: "https://pixabay.com/photos/dog-puppy-pet-cute-animal-3071334/", pet_id: 5 },
+  { url: "https://images.pexels.com/photos/1390361/pexels-photo-1390361.jpeg", pet_id: 5 },
+  { url: "https://cdn.pixabay.com/photo/2016/11/18/17/20/dog-1839806_1280.jpg", pet_id: 5 },
+  { url: "https://images.pexels.com/photos/458801/pexels-photo-458801.jpeg", pet_id: 5 },
 
-  { url: "https://pixabay.com/photos/animals-dog-cat-puppy-young-2198994/", pet_id: 6 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-labrador-retriever-1108099/", pet_id: 6 },
-  { url: "https://pixabay.com/photos/dog-puppy-pet-cute-animal-3071334/", pet_id: 6 },
+  { url: "https://images.pexels.com/photos/1346086/pexels-photo-1346086.jpeg", pet_id: 6 },
+  { url: "https://cdn.pixabay.com/photo/2016/03/27/21/16/dog-1284307_1280.jpg", pet_id: 6 },
+  { url: "https://images.pexels.com/photos/458804/pexels-photo-458804.jpeg", pet_id: 6 },
 
   // 🐱 Chats (pet_id: 7 à 12)
-  { url: "https://pixabay.com/photos/cat-animal-cat-portrait-1046544/", pet_id: 7 },
-  { url: "https://www.pexels.com/photo/gray-cat-lying-on-white-textile-lying-on-bed-617278/", pet_id: 7 },
-  { url: "https://pixabay.com/photos/cat-kitten-pet-animals-cute-551554/", pet_id: 7 },
+  { url: "https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2935521_1280.jpg", pet_id: 7 },
+  { url: "https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg", pet_id: 7 },
+  { url: "https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg", pet_id: 7 },
 
-  { url: "https://pixabay.com/photos/cat-animal-cat-portrait-1046544/", pet_id: 8 },
-  { url: "https://www.pexels.com/photo/gray-cat-lying-on-white-textile-lying-on-bed-617278/", pet_id: 8 },
-  { url: "https://pixabay.com/photos/cat-kitten-pet-animals-cute-551554/", pet_id: 8 },
+  { url: "https://images.pexels.com/photos/104827/pexels-photo-104827.jpeg", pet_id: 8 },
+  { url: "https://cdn.pixabay.com/photo/2015/03/27/13/16/cat-694730_1280.jpg", pet_id: 8 },
+  { url: "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg", pet_id: 8 },
 
-  { url: "https://pixabay.com/photos/cat-animal-cat-portrait-1046544/", pet_id: 9 },
-  { url: "https://www.pexels.com/photo/gray-cat-lying-on-white-textile-lying-on-bed-617278/", pet_id: 9 },
-  { url: "https://pixabay.com/photos/cat-kitten-pet-animals-cute-551554/", pet_id: 9 },
+  { url: "https://cdn.pixabay.com/photo/2016/02/10/16/37/cat-1192026_1280.jpg", pet_id: 9 },
+  { url: "https://images.pexels.com/photos/208984/pexels-photo-208984.jpeg", pet_id: 9 },
+  { url: "https://cdn.pixabay.com/photo/2015/11/16/16/28/cat-1046544_1280.jpg", pet_id: 9 },
 
-  { url: "https://pixabay.com/photos/cat-animal-cat-portrait-1046544/", pet_id: 10 },
-  { url: "https://www.pexels.com/photo/gray-cat-lying-on-white-textile-lying-on-bed-617278/", pet_id: 10 },
-  { url: "https://pixabay.com/photos/cat-kitten-pet-animals-cute-551554/", pet_id: 10 },
+  { url: "https://cdn.pixabay.com/photo/2015/11/16/22/14/cat-1046544_1280.jpg", pet_id: 10 },
+  { url: "https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg", pet_id: 10 },
+  { url: "https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg", pet_id: 10 },
 
-  { url: "https://pixabay.com/photos/cat-animal-cat-portrait-1046544/", pet_id: 11 },
-  { url: "https://www.pexels.com/photo/gray-cat-lying-on-white-textile-lying-on-bed-617278/", pet_id: 11 },
-  { url: "https://pixabay.com/photos/cat-kitten-pet-animals-cute-551554/", pet_id: 11 },
+  { url: "https://images.pexels.com/photos/1276553/pexels-photo-1276553.jpeg", pet_id: 11 },
+  { url: "https://cdn.pixabay.com/photo/2018/02/27/13/39/cat-3188373_1280.jpg", pet_id: 11 },
+  { url: "https://images.pexels.com/photos/2698519/pexels-photo-2698519.jpeg", pet_id: 11 },
 
-  { url: "https://pixabay.com/photos/cat-animal-cat-portrait-1046544/", pet_id: 12 },
-  { url: "https://www.pexels.com/photo/gray-cat-lying-on-white-textile-lying-on-bed-617278/", pet_id: 12 },
-  { url: "https://pixabay.com/photos/cat-kitten-pet-animals-cute-551554/", pet_id: 12 },
+  { url: "https://images.pexels.com/photos/248280/pexels-photo-248280.jpeg", pet_id: 12 },
+  { url: "https://cdn.pixabay.com/photo/2020/03/18/18/35/cat-4943034_1280.jpg", pet_id: 12 },
+  { url: "https://images.pexels.com/photos/971360/pexels-photo-971360.jpeg", pet_id: 12 },
 
   // 🐰 Lapins (pet_id: 13 à 18)
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903016/", pet_id: 13 },
-  { url: "https://www.pexels.com/photo/white-rabbit-on-green-grass-326012/", pet_id: 13 },
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903017/", pet_id: 13 },
+  { url: "https://cdn.pixabay.com/photo/2018/06/27/08/11/rabbit-3498347_1280.jpg", pet_id: 13 },
+  { url: "https://images.pexels.com/photos/326012/pexels-photo-326012.jpeg", pet_id: 13 },
+  { url: "https://cdn.pixabay.com/photo/2015/02/21/18/00/rabbit-645078_1280.jpg", pet_id: 13 },
 
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903016/", pet_id: 14 },
-  { url: "https://www.pexels.com/photo/white-rabbit-on-green-grass-326012/", pet_id: 14 },
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903017/", pet_id: 14 },
+  { url: "https://cdn.pixabay.com/photo/2017/03/20/17/54/rabbit-2165369_1280.jpg", pet_id: 14 },
+  { url: "https://images.pexels.com/photos/220177/pexels-photo-220177.jpeg", pet_id: 14 },
+  { url: "https://cdn.pixabay.com/photo/2020/04/15/18/12/rabbit-5047479_1280.jpg", pet_id: 14 },
 
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903016/", pet_id: 15 },
-  { url: "https://www.pexels.com/photo/white-rabbit-on-green-grass-326012/", pet_id: 15 },
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903017/", pet_id: 15 },
+  { url: "https://cdn.pixabay.com/photo/2016/03/04/14/20/rabbit-1238242_1280.jpg", pet_id: 15 },
+  { url: "https://images.pexels.com/photos/210658/pexels-photo-210658.jpeg", pet_id: 15 },
+  { url: "https://cdn.pixabay.com/photo/2019/02/22/18/17/rabbit-4010160_1280.jpg", pet_id: 15 },
 
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903016/", pet_id: 16 },
-  { url: "https://www.pexels.com/photo/white-rabbit-on-green-grass-326012/", pet_id: 16 },
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903017/", pet_id: 16 },
+  { url: "https://cdn.pixabay.com/photo/2016/07/28/13/09/rabbit-1544815_1280.jpg", pet_id: 16 },
+  { url: "https://images.pexels.com/photos/1400565/pexels-photo-1400565.jpeg", pet_id: 16 },
+  { url: "https://cdn.pixabay.com/photo/2020/06/07/09/10/rabbit-5264938_1280.jpg", pet_id: 16 },
 
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903016/", pet_id: 17 },
-  { url: "https://www.pexels.com/photo/white-rabbit-on-green-grass-326012/", pet_id: 17 },
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903017/", pet_id: 17 },
+  { url: "https://cdn.pixabay.com/photo/2014/04/05/11/38/rabbit-316207_1280.jpg", pet_id: 17 },
+  { url: "https://images.pexels.com/photos/460930/pexels-photo-460930.jpeg", pet_id: 17 },
+  { url: "https://cdn.pixabay.com/photo/2017/09/25/13/12/rabbit-2772342_1280.jpg", pet_id: 17 },
 
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903016/", pet_id: 18 },
-  { url: "https://www.pexels.com/photo/white-rabbit-on-green-grass-326012/", pet_id: 18 },
-  { url: "https://pixabay.com/photos/rabbit-bunny-pet-animals-cute-1903017/", pet_id: 18 },
+  { url: "https://cdn.pixabay.com/photo/2019/12/20/15/09/rabbit-4701291_1280.jpg", pet_id: 18 },
+  { url: "https://images.pexels.com/photos/621487/pexels-photo-621487.jpeg", pet_id: 18 },
+  { url: "https://cdn.pixabay.com/photo/2015/11/17/17/02/rabbit-1044962_1280.jpg", pet_id: 18 },
 
   // 🐾 Furets (pet_id: 19 à 24)
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 19 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 19 },
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 19 },
+  { url: "https://cdn.pixabay.com/photo/2017/04/08/19/02/ferret-2214518_1280.jpg", pet_id: 19 },
+  { url: "https://images.pexels.com/photos/325490/pexels-photo-325490.jpeg", pet_id: 19 },
+  { url: "https://cdn.pixabay.com/photo/2016/11/29/04/15/ferret-1863104_1280.jpg", pet_id: 19 },
 
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 20 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 20 },
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 20 },
+  { url: "https://cdn.pixabay.com/photo/2018/08/22/13/53/ferret-3625052_1280.jpg", pet_id: 20 },
+  { url: "https://images.pexels.com/photos/159448/ferret-pet-animal-ferret-159448.jpeg", pet_id: 20 },
+  { url: "https://cdn.pixabay.com/photo/2019/04/24/18/49/ferret-4151608_1280.jpg", pet_id: 20 },
 
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 21 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 21 },
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 21 },
+  { url: "https://cdn.pixabay.com/photo/2017/05/30/04/07/ferret-2356746_1280.jpg", pet_id: 21 },
+  { url: "https://images.pexels.com/photos/458806/pexels-photo-458806.jpeg", pet_id: 21 },
+  { url: "https://cdn.pixabay.com/photo/2020/02/23/10/47/ferret-4872312_1280.jpg", pet_id: 21 },
 
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 22 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 22 },
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 22 },
+  { url: "https://cdn.pixabay.com/photo/2019/10/06/14/16/ferret-4523292_1280.jpg", pet_id: 22 },
+  { url: "https://images.pexels.com/photos/458807/pexels-photo-458807.jpeg", pet_id: 22 },
+  { url: "https://cdn.pixabay.com/photo/2015/01/14/21/15/ferret-600203_1280.jpg", pet_id: 22 },
 
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 23 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 23 },
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 23 },
+  { url: "https://cdn.pixabay.com/photo/2018/11/18/21/11/ferret-3825039_1280.jpg", pet_id: 23 },
+  { url: "https://images.pexels.com/photos/458808/pexels-photo-458808.jpeg", pet_id: 23 },
+  { url: "https://cdn.pixabay.com/photo/2016/12/13/11/17/ferret-1900186_1280.jpg", pet_id: 23 },
 
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 24 },
-  { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 24 },
-  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 24 },
+  { url: "https://cdn.pixabay.com/photo/2021/01/05/13/29/ferret-5880737_1280.jpg", pet_id: 24 },
+  { url: "https://images.pexels.com/photos/458809/pexels-photo-458809.jpeg", pet_id: 24 },
+  { url: "https://cdn.pixabay.com/photo/2017/08/14/14/35/ferret-2544629_1280.jpg", pet_id: 24 },
 
   // 🐹 Hamsters (pet_id: 25 à 30)
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 25 },
-  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 25 },
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 25 },
+  { url: "https://cdn.pixabay.com/photo/2016/06/12/19/52/hamster-1459452_1280.jpg", pet_id: 25 },
+  { url: "https://images.pexels.com/photos/299865/pexels-photo-299865.jpeg", pet_id: 25 },
+  { url: "https://cdn.pixabay.com/photo/2015/06/19/21/24/hamster-815257_1280.jpg", pet_id: 25 },
 
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 26 },
-  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 26 },
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 26 },
+  { url: "https://cdn.pixabay.com/photo/2018/07/17/10/49/hamster-3545814_1280.jpg", pet_id: 26 },
+  { url: "https://images.pexels.com/photos/374906/pexels-photo-374906.jpeg", pet_id: 26 },
+  { url: "https://cdn.pixabay.com/photo/2017/10/28/18/22/hamster-2899771_1280.jpg", pet_id: 26 },
 
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 27 },
-  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 27 },
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 27 },
+  { url: "https://cdn.pixabay.com/photo/2016/12/04/18/45/hamster-1882477_1280.jpg", pet_id: 27 },
+  { url: "https://images.pexels.com/photos/45718/hamster-rodent-pet-45718.jpeg", pet_id: 27 },
+  { url: "https://cdn.pixabay.com/photo/2016/05/26/17/20/hamster-1416127_1280.jpg", pet_id: 27 },
 
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 28 },
-  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 28 },
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 28 },
+  { url: "https://cdn.pixabay.com/photo/2017/09/25/12/36/hamster-2774811_1280.jpg", pet_id: 28 },
+  { url: "https://images.pexels.com/photos/458810/pexels-photo-458810.jpeg", pet_id: 28 },
+  { url: "https://cdn.pixabay.com/photo/2018/04/12/12/23/hamster-3313767_1280.jpg", pet_id: 28 },
 
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 29 },
-  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 29 },
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 29 },
+  { url: "https://cdn.pixabay.com/photo/2020/08/31/05/59/hamster-5536736_1280.jpg", pet_id: 29 },
+  { url: "https://images.pexels.com/photos/206447/pexels-photo-206447.jpeg", pet_id: 29 },
+  { url: "https://cdn.pixabay.com/photo/2017/11/12/19/30/hamster-2931365_1280.jpg", pet_id: 29 },
 
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 30 },
-  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 30 },
-  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 30 },
+  { url: "https://cdn.pixabay.com/photo/2017/06/10/19/16/hamster-2394104_1280.jpg", pet_id: 30 },
+  { url: "https://images.pexels.com/photos/458811/pexels-photo-458811.jpeg", pet_id: 30 },
+  { url: "https://cdn.pixabay.com/photo/2015/05/14/14/04/hamster-768861_1280.jpg", pet_id: 30 },
 
-     // 🐶 Chiens (pet_id: 31 à 36)
+  // 🐶 Chiens (pet_id: 31 à 36)
   { url: "https://pixabay.com/photos/animals-dog-cat-puppy-young-2198994/", pet_id: 31 },
   { url: "https://www.pexels.com/photo/close-up-photo-of-labrador-retriever-1108099/", pet_id: 31 },
   { url: "https://pixabay.com/photos/dog-puppy-pet-cute-animal-3071334/", pet_id: 31 },
@@ -560,48 +570,48 @@ await Picture.bulkCreate([
 
   { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 50 },
   { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 50 },
-    { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 50 },
+  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 50 },
 
-    { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 51 },
-    { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 51 },
-    { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 51 },
+  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 51 },
+  { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 51 },
+  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 51 },
 
-    { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 52 },
-    { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 52 },
-    { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 52 },
+  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 52 },
+  { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 52 },
+  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 52 },
 
-    { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 53 },
-    { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 53 },
-    { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 53 },
+  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 53 },
+  { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 53 },
+  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 53 },
 
-    { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 54 },
-    { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 54 },
-    { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 54 },
+  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577329/", pet_id: 54 },
+  { url: "https://www.pexels.com/photo/close-up-photo-of-ferret-325490/", pet_id: 54 },
+  { url: "https://pixabay.com/photos/ferret-animal-cute-pet-domestic-577328/", pet_id: 54 },
 
-    // 🐹 Hamsters (pet_id: 55 à 60)
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 55 },
-    { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 55 },
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 55 },
+  // 🐹 Hamsters (pet_id: 55 à 60)
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 55 },
+  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 55 },
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 55 },
 
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 56 },
-    { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 56 },
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 56 },
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 56 },
+  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 56 },
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 56 },
 
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 57 },
-    { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 57 },
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 57 },
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 57 },
+  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 57 },
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 57 },
 
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 58 },
-    { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 58 },
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 58 },
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 58 },
+  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 58 },
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 58 },
 
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 59 },
-    { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 59 },
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 59 },
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 59 },
+  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 59 },
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 59 },
 
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 60 },
-    { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 60 },
-    { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 60 }
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552303/", pet_id: 60 },
+  { url: "https://www.pexels.com/photo/hamster-on-human-hand-458799/", pet_id: 60 },
+  { url: "https://pixabay.com/photos/hamster-animal-cute-pet-rodent-552304/", pet_id: 60 }
 ]);
 
 console.log("Seeding des données terminé !!!");
