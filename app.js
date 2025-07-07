@@ -4,23 +4,16 @@ import { router } from './src/routers/router.js'; // Importation du routeur cont
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
-
-// Création de l'application Express
-const app = express();
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-
 
 // Sert les images depuis le dossier /data/images
 app.use('/images', express.static(path.resolve(__dirname, 'src/data/images')));
 
-
+// Création de l'application Express
+const app = express();
 
 //  Active CORS pour toutes les routes
-
 app.use(
 	cors({
 		origin: ["http://localhost:5173", "https://fetch-me-home.netlify.app"

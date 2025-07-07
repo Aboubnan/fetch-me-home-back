@@ -326,74 +326,74 @@ await Request.bulkCreate([
 // création d'images pour animaux
 await Picture.bulkCreate([
   // 🐶 Chiens
-  { url: "/images/dog/alvan-nee-73jFlBFUk5Y-unsplash.jpg", pet_id: 1 },
-  { url: "/images/dog/alvan-nee-ME65VXZBL5M-unsplash.jpg", pet_id: 1 },
-  { url: "/images/dog/alvan-nee-Q2J38A2V5y-unsplash.jpg", pet_id: 1 },
+  { url: "/images/dog/rex1.jpg", pet_id: 1 },
+  { url: "/images/dog/rex2.jpg", pet_id: 1 },
+  { url: "/images/dog/rex3.jpg", pet_id: 1 },
 
-  { url: "/images/dog/border-collie.jpg", pet_id: 2 },
-  { url: "/images/dog/border-collie2.jpg", pet_id: 2 },
-  { url: "/images/dog/border-collie3.jpg", pet_id: 2 },
+  { url: "/images/dog/max1.jpg", pet_id: 2 },
+  { url: "/images/dog/max2.jpg", pet_id: 2 },
+  { url: "/images/dog/max3.jpg", pet_id: 2 },
 
-  { url: "/images/dog/dog3.jpg", pet_id: 3 },
-  { url: "/images/dog/dog3-2.jpg", pet_id: 3 },
-  { url: "/images/dog/dog3-3.jpg", pet_id: 3 },
+  { url: "/images/dog/rocky1.jpg", pet_id: 3 },
+  { url: "/images/dog/rocky2.jpg", pet_id: 3 },
+  { url: "/images/dog/rocky3.jpg", pet_id: 3 },
 
   // 🐱 Chats
-  { url: "/images/cat/alvan-nee-GoqMTQFiAyY-unsplash.jpg", pet_id: 4 },
-  { url: "/images/cat/alvan-nee-kfDLP0sSmU4-unsplash.jpg", pet_id: 4 },
-  { url: "/images/cat/alvan-nee-L4xD28wS0QQ-unsplash.jpg", pet_id: 4 },
+  { url: "/images/cat/zelda1.jpg", pet_id: 4 },
+  { url: "/images/cat/zelda2.jpg", pet_id: 4 },
+  { url: "/images/cat/zelda3.jpg", pet_id: 4 },
 
-  { url: "/images/cat/mikhail-vasilyev-NodtnCsLdTE-unsplash.jpg", pet_id: 5 },
-  { url: "/images/cat/sergey-semin-Y0WXj3xqJz0-unsplash.jpg", pet_id: 5 },
-  { url: "/images/cat/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg", pet_id: 5 },
+  { url: "/images/cat/tom1.jpg", pet_id: 5 },
+  { url: "/images/cat/tom2.jpg", pet_id: 5 },
+  { url: "/images/cat/tom3.jpg", pet_id: 5 },
 
-  { url: "/images/cat/amber-kipp-75715CVEJhI-unsplash.jpg", pet_id: 6 },
-  { url: "/images/cat/erik-jan-leusink-IbPxGLgJiMI-unsplash.jpg", pet_id: 6 },
-  { url: "/images/cat/krysten-merriman-7BrhZmwXn08-unsplash.jpg", pet_id: 6 },
+  { url: "/images/cat/luna1.jpg", pet_id: 6 },
+  { url: "/images/cat/luna2.jpg", pet_id: 6 },
+  { url: "/images/cat/luna3.jpg", pet_id: 6 },
 
   // 🐰 Lapins
-  { url: "/images/rabbit/adrian-pereira-H81tkoe-a0-unsplash.jpg", pet_id: 7 },
-  { url: "/images/rabbit/gary-bendig-KyHT4tDEQ-unsplash.jpg", pet_id: 7 },
-  { url: "/images/rabbit/lucy-m-KNMBRhfSIT8-unsplash.jpg", pet_id: 7 },
+  { url: "/images/rabbit/cookie1.jpg", pet_id: 7 },
+  { url: "/images/rabbit/cookie2.jpg", pet_id: 7 },
+  { url: "/images/rabbit/cookie3.jpg", pet_id: 7 },
 
-  { url: "/images/rabbit/sandy-millar-kKAaCe6fswY-unsplash.jpg", pet_id: 8 },
-  { url: "/images/rabbit/eric-jan-leusink-SDXAVHbA-unsplash.jpg", pet_id: 8 },
-  { url: "/images/rabbit/janan-302ofliG0FE-unsplash.jpg", pet_id: 8 },
+  { url: "/images/rabbit/bunny1.jpg", pet_id: 8 },
+  { url: "/images/rabbit/bunny2.jpg", pet_id: 8 },
+  { url: "/images/rabbit/bunny3.jpg", pet_id: 8 },
 
-  { url: "/images/rabbit/stefan-fluck-usojCs--nEk-unsplash.jpg", pet_id: 9 },
-  { url: "/images/rabbit/satyabratasm-uKMVN-BWyU-unsplash.jpg", pet_id: 9 },
-  { url: "/images/rabbit/guillermo-casales-LQCoell5v2M-unsplash.jpg", pet_id: 9 },
+  { url: "/images/rabbit/thumper1.jpg", pet_id: 9 },
+  { url: "/images/rabbit/thumper2.jpg", pet_id: 9 },
+  { url: "/images/rabbit/thumper3.jpg", pet_id: 9 },
 
   // 🐾 Furets
-  { url: "/images/furret/furret4.jpg", pet_id: 10 },
-  { url: "/images/furret/furret4-2.jpg", pet_id: 10 },
-  { url: "/images/furret/furret4-3.jpg", pet_id: 10 },
+  { url: "/images/furret/daisy1.jpg", pet_id: 10 },
+  { url: "/images/furret/daisy2.jpg", pet_id: 10 },
+  { url: "/images/furret/daisy3.jpg", pet_id: 10 },
 
   // 🐹 Hamsters
-  { url: "/images/hamster/alvan-nee-4aU3p3Y6Zz8-unsplash.jpg", pet_id: 11 },
-  { url: "/images/hamster/alvan-nee-8g0D2ZfA2i8-unsplash.jpg", pet_id: 11 },
-  { url: "/images/hamster/alvan-nee-9Z1KRIfpBTM-unsplash.jpg", pet_id: 11 },
+  { url: "/images/hamster/lili1.jpg", pet_id: 11 },
+  { url: "/images/hamster/lili2.jpg", pet_id: 11 },
+  { url: "/images/hamster/lili3.jpg", pet_id: 11 },
 
-  { url: "/images/hamster/alvan-nee-AX9qD2z5n3I-unsplash.jpg", pet_id: 12 },
-  { url: "/images/hamster/alvan-nee-BY7xK3qJz9M-unsplash.jpg", pet_id: 12 },
-  { url: "/images/hamster/alvan-nee-CZ8rL4sKp1N-unsplash.jpg", pet_id: 12 },
+  { url: "/images/hamster/popcorn1.jpg", pet_id: 12 },
+  { url: "/images/hamster/popcorn2.jpg", pet_id: 12 },
+  { url: "/images/hamster/popcorn3.jpg", pet_id: 12 },
 
-  { url: "/images/hamster/alvan-nee-DW9sM5tLp2O-unsplash.jpg", pet_id: 13 },
-  { url: "/images/hamster/alvan-nee-EA0tN6uMq3P-unsplash.jpg", pet_id: 13 },
-  { url: "/images/hamster/alvan-nee-FB1uO7vNr4Q-unsplash.jpg", pet_id: 13 },
+  { url: "/images/hamster/peach1.jpg", pet_id: 13 },
+  { url: "/images/hamster/peach2.jpg", pet_id: 13 },
+  { url: "/images/hamster/peach3.jpg", pet_id: 13 },
 
   // 🦜 Perroquets
-  { url: "/images/perroquet/david-clode-1XnBGOdIdjI-unsplash.jpg", pet_id: 14 },
-  { url: "/images/perroquet/david-clode-4gLzJY3GzQg-unsplash.jpg", pet_id: 14 },
-  { url: "/images/perroquet/david-clode-5D9z4oZz1xk-unsplash.jpg", pet_id: 14 },
+  { url: "/images/perroquet/rio1.jpg", pet_id: 14 },
+  { url: "/images/perroquet/rio2.jpg", pet_id: 14 },
+  { url: "/images/perroquet/rio3.jpg", pet_id: 14 },
 
-  { url: "/images/perroquet/david-clode-6aLk5QZz2yY-unsplash.jpg", pet_id: 15 },
-  { url: "/images/perroquet/david-clode-7bM8rRZz3zZ-unsplash.jpg", pet_id: 15 },
-  { url: "/images/perroquet/david-clode-8cN9sSZz4wW-unsplash.jpg", pet_id: 15 },
+  { url: "/images/perroquet/kiwi1.jpg", pet_id: 15 },
+  { url: "/images/perroquet/kiwi2.jpg", pet_id: 15 },
+  { url: "/images/perroquet/kiwi3.jpg", pet_id: 15 },
 
-  { url: "/images/perroquet/david-clode-9dO0tTZz5vV-unsplash.jpg", pet_id: 16 },
-  { url: "/images/perroquet/david-clode-aeP8ZUZz6uU-unsplash.jpg", pet_id: 16 },
-  { url: "/images/perroquet/david-clode-bfQ9aVZz7tT-unsplash.jpg", pet_id: 16 },
+  { url: "/images/perroquet/coco1.jpg", pet_id: 16 },
+  { url: "/images/perroquet/coco2.jpg", pet_id: 16 },
+  { url: "/images/perroquet/coco3.jpg", pet_id: 16 },
 ]);
 
 console.log("Seeding des données terminé !!!");
