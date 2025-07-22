@@ -38,7 +38,7 @@ CREATE TABLE "species" (
 -- creation type pour enum
 CREATE TYPE sex AS ENUM ('Male', 'Femelle');
 
-CREATE TABLE "pet" (
+CREATE TABLE pet (
   "id" SERIAL PRIMARY KEY,
   "name" VARCHAR(255) NOT NULL,
   "birthdate" DATE NOT NULL,

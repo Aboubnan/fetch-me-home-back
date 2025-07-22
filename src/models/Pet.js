@@ -1,13 +1,15 @@
 import { DataTypes, Model } from "sequelize";
 import { client } from "./client.js";
 
-export class Pet extends Model {}
+export class Pet extends Model { }
 
 Pet.init(
     {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
+            field: 'name',
+
         },
 
         birthdate: {
@@ -31,12 +33,12 @@ Pet.init(
             defaultValue: true
         },
 
-        species_id : {
+        species_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
 
-        association_id : {
+        association_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         }

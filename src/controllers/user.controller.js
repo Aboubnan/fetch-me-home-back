@@ -20,7 +20,7 @@ export const userController = {
     },
 
     // Récupérer un user spécifique par son ID
-    async getOne(req, res,next) {
+    async getOne(req, res, next) {
         const { id } = req.params; // Extraction de l'ID depuis les paramètres de l'URL
 
         // si id n'est pas un number, on continue via next pour aboutir une 404 (on précise que l'id est incorrect car pas du bon format !)
@@ -40,20 +40,20 @@ export const userController = {
 
     // Créer un nouveau user
     async create(req, res, next) {
-        
+
         const inputData = req.body; //Données d'entrée pour la création de l'user
         console.log("body: ", inputData);
 
-        if(!inputData) { // si body vide, erreur 500 avec message
+        if (!inputData) { // si body vide, erreur 500 avec message
             next(new UserInputError("Body content is empty"))
         }
-        
+
         // sanitize des données (objet inputData modifié par ref)
         sanitizeInput(inputData);
 
         // Validation des données avec Zod 'userCreateSchema'
         await userCreateSchema.parseAsync(inputData);
-        
+
         console.log(inputData.password);
 
         // Hachage du mot de passe avant l'enregistrement
@@ -77,7 +77,7 @@ export const userController = {
 
     // Mettre a jour un user existant (via son Id)
     async update(req, res, next) {
-        const  { id } = req.params;
+        const { id } = req.params;
         // si id n'est pas un number, on continue via next pour aboutir à la 404
         if (isNaN(id)) {
             console.log(id);
@@ -85,20 +85,27 @@ export const userController = {
         }
 
         const inputData = req.body;
-        if(!inputData) { // si body vide, erreur 500 avec message
+        if (!inputData) { // si body vide, erreur 500 avec message
             next(new UserInputError("Body content is empty"))
         }
 
         // sanitize des données (objet inputData modifié par ref)
         sanitizeInput(inputData);
-    
+
         // validation des données via le schéma ZOD 'userUpdateSchema'
         await userUpdateSchema.parseAsync(inputData);
         const user = await User.findByPk(id);
 
-        if(!user){
-          return next(new NotFoundError('user not found'));
+        if (!user) {
+            return next(new NotFoundError('user not found'));
         }
+
+        if (inputData.password) {
+            const saltRounds = 10;
+            inputData.password = await bcrypt.hash(inputData.password, saltRounds);
+        }
+
+
 
         // On met à jour l'user avec les nouvelles données
         await user.update(inputData);
@@ -116,11 +123,31 @@ export const userController = {
         }
 
         const user = await User.findByPk(id);
-        if(!user){
+        if (!user) {
             return next(new NotFoundError('User not found'));
         }
         // on supprime l'user de la base de données
         await user.destroy();
         res.status(204).end();
+    },
+
+    // Récupérer le profil de l'utilisateur connecté
+    async getMyProfile(req, res, next) {
+        try {
+            const userId = req.user.id;
+
+            const user = await User.findByPk(userId, {
+                attributes: { exclude: ['password'] }, // on ne renvoie pas le mot de passe
+                include: ['requests'], // si tu veux inclure les demandes directement
+            });
+
+            if (!user) {
+                return next(new NotFoundError('Utilisateur non trouvé'));
+            }
+
+            res.json(user);
+        } catch (err) {
+            next(err);
+        }
     }
 }

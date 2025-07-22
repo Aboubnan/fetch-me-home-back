@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import cors from 'cors'; // CORS (Cross-Origin Resource Sharing) est un mécanisme de sécurité qui permet de contrôler les ressources partagées entre différentes origines
 import express from 'express'; // Express est un framework minimaliste pour créer des applications web en Node.js
 import { router } from './src/routers/router.js'; // Importation du routeur contenant toutes les routes de l'application

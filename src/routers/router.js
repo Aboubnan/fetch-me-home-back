@@ -26,7 +26,7 @@ router.route("/login/association")      // route pour connexion "association"
 router.route("/users")
         .get(controllerWrapper(userController.getAll))
         .post(controllerWrapper(userController.create));
-        
+
 router.route("/users/:id")
         .get(controllerWrapper(userController.getOne))
         .put(controllerWrapper(userController.update))
@@ -81,6 +81,14 @@ router.route("/requests/:id")
         .get(controllerWrapper(requestController.getOne))
         .put(controllerWrapper(requestController.update))
         .delete(controllerWrapper(requestController.delete));
+
+// retourne les infos du bénévole connecté
+router.route('/myProfile')
+        .get(checkToken, controllerWrapper(userController.getMyProfile));
+
+// retourne ses demandes d’adoption
+router.route('/myProfile/requests')
+        .get(checkToken, controllerWrapper(requestController.getMyRequests));
 
 //*** middleware des erreurs
 router.use(errorMiddleware);
